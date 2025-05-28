@@ -28,8 +28,8 @@ const contactLinks: ContactLink[] = [
     ariaLabel: "View Mouheb Sliti's LinkedIn profile",
   },
   {
-    href: "/MouhebSliti_Resume.pdf",
-    text: "My Resume", // Changed from "Download CV"
+    href: "/documents/CV.pdf",
+    text: "My Resume",
     icon: DownloadCloud,
     ariaLabel: "Download Mouheb Sliti's CV",
     download: true,
