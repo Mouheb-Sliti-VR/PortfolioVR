@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -40,28 +39,57 @@ export function ContactSection() {
   return (
     <section id="contact" className="py-16 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <Card className="max-w-xl mx-auto shadow-xl rounded-xl border border-border/70 overflow-hidden">
-          <CardHeader className="text-center bg-card p-6">
-            <CardTitle className="text-3xl font-bold text-primary font-poppins">
+        <Card className="w-full max-w-3xl mx-auto shadow-xl rounded-2xl border border-border overflow-hidden bg-card">
+          <CardHeader className="text-center px-8 md:px-16 py-8 bg-card shadow-none rounded-b-3xl">
+            <CardTitle className="text-4xl font-extrabold text-primary font-poppins drop-shadow-sm tracking-tight mb-2">
               Let's Connect
             </CardTitle>
-            <CardDescription className="text-md text-foreground/80 mt-2 max-w-md mx-auto">
-              I'm always open to discussing new projects, creative ideas, or opportunities.
-              Feel free to reach out or download my CV.
+            <div className="flex flex-col items-center gap-2 mt-4">
+              <span className="text-base font-semibold font-poppins text-foreground/90 tracking-wide mb-1">
+                Unity Certified Professional Programmer
+              </span>
+              <a
+                href="https://www.credly.com/badges/453a25b9-89f7-48bc-a6f8-8bef92931365"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Click to verify"
+                className="inline-block"
+                style={{ filter: "drop-shadow(0 0 8px #e5e7eb) drop-shadow(0 0 16px #e5e7eb)" }}
+              >
+                <span className="rounded-full border-2 border-accent bg-background p-2 shadow-lg hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+                  <img
+                    src="/images/unity-certified-professional-programmer.png"
+                    alt="Unity Certified Professional Programmer Badge"
+                    width={56}
+                    height={56}
+                    className="block"
+                  />
+                </span>
+              </a>
+            </div>
+            <CardDescription className="text-lg text-foreground/80 mt-6 max-w-md mx-auto font-medium">
+              I'm always open to discussing new projects, creative ideas, or opportunities.<br />
+              <span className="text-accent font-semibold">Feel free to reach out or download my CV.</span>
             </CardDescription>
           </CardHeader>
-          <CardContent className="p-6 md:p-8 bg-card">
-            <div className="flex flex-wrap justify-center gap-4">
+          <CardContent className="px-8 md:px-16 py-8 bg-card rounded-b-2xl">
+            <div className="flex flex-wrap justify-center gap-6">
               {contactLinks.map((link) => (
                 <Button
                   key={link.text}
                   asChild
                   variant="outline"
                   size="lg"
-                  className="py-3 text-base justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 ease-in-out group shadow-sm hover:shadow-md"
+                  className="py-4 px-6 text-lg font-semibold rounded-xl justify-center bg-background hover:bg-accent hover:text-accent-foreground transition-all duration-300 ease-in-out group shadow-md hover:shadow-xl border-2 border-primary/20"
                 >
-                  <Link href={link.href} target={link.download ? "_blank" : "_blank"} rel="noopener noreferrer" aria-label={link.ariaLabel} download={link.download ? 'MouhebSliti_Resume.pdf' : undefined}>
-                    <link.icon className="mr-2 h-5 w-5 text-primary group-hover:text-accent-foreground transition-colors duration-300" />
+                  <Link
+                    href={link.href}
+                    target={link.download ? "_blank" : "_blank"}
+                    rel="noopener noreferrer"
+                    aria-label={link.ariaLabel}
+                    download={link.download ? 'MouhebSliti_Resume.pdf' : undefined}
+                  >
+                    <link.icon className="mr-3 h-6 w-6 text-primary group-hover:text-accent-foreground transition-colors duration-300" />
                     {link.text}
                   </Link>
                 </Button>

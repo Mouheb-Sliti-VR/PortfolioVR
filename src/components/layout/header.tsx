@@ -24,7 +24,7 @@ export function Header() {
               Mouheb Sliti
             </span>
             <span className="text-sm font-poppins text-foreground/80 block">
-              XR Developer / Backend Engineer
+              XR Developer / R&D Engineer
             </span>
           </div>
         </Link>

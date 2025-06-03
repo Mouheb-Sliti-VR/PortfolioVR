@@ -68,27 +68,40 @@ export function PortfolioItem({ project }: PortfolioItemProps) {
 
         <div className="flex-grow overflow-y-auto p-6 space-y-6">
           <div className="aspect-video w-full rounded-lg overflow-hidden bg-muted border border-border shadow-inner">
-            <video
-              controls
-              controlsList="nodownload"
-              onContextMenu={(e) => e.preventDefault()}
-              className="w-full h-full object-contain"
-              poster={project.imageUrl}
-              data-ai-hint="project demo video"
-              key={project.videoUrl || project.id}
-            >
-              <source
-                src={
-                  project.videoUrl ||
-                  `https://placehold.co/1280x720.mp4?text=${encodeURIComponent(
-                    project.title
-                  )}+Demo`
-                }
-                type="video/mp4"
-              />
-              Your browser does not support the video tag. A demo video would
-              appear here.
-            </video>
+            {project.videoUrl?.includes("drive.google.com") ? (
+              <iframe
+                src={project.videoUrl}
+                width="100%"
+                height="100%"
+                allow="autoplay"
+                allowFullScreen
+                frameBorder="0"
+                title={`${project.title} Video`}
+                className="w-full h-full"
+              ></iframe>
+            ) : (
+              <video
+                controls
+                controlsList="nodownload"
+                onContextMenu={(e) => e.preventDefault()}
+                className="w-full h-full object-contain"
+                poster={project.imageUrl}
+                data-ai-hint="project demo video"
+                key={project.videoUrl || project.id}
+              >
+                <source
+                  src={
+                    project.videoUrl ||
+                    `https://placehold.co/1280x720.mp4?text=${encodeURIComponent(
+                      project.title
+                    )}+Demo`
+                  }
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag. A demo video would
+                appear here.
+              </video>
+            )}
           </div>
 
           <div>
