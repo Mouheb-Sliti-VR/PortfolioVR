@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    appDir: true,            // Enables the new App Router feature in Next.js
+  },
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -7,7 +10,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    unoptimized: true,       // Required for static export (no server-side image optimization) :contentReference[oaicite:6]{index=6}
+    unoptimized: true,       // This disables Next.js built-in image optimization
     remotePatterns: [
       {
         protocol: 'https',
@@ -16,9 +19,9 @@ const nextConfig = {
       },
     ],
   },
-  output: 'export',          // Next.js will run `next build && next export` to produce `out/` :contentReference[oaicite:7]{index=7}
-  trailingSlash: true,       // Ensures `/about/` → `out/about/index.html` (GitHub Pages expects folder-based routing) :contentReference[oaicite:8]{index=8}
-  basePath: '/PortfolioVR',   // All asset URLs and links are prefixed with `/PortfolioVR` :contentReference[oaicite:9]{index=9}
+  trailingSlash: true,       // Adds trailing slash for all routes
+  basePath: '/PortfolioVR',  // Prefix all URLs with /PortfolioVR
+  // REMOVE output: 'export' since it conflicts with App Router usage
 };
 
 module.exports = nextConfig;
