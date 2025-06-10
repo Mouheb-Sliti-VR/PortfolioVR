@@ -16,10 +16,7 @@ const nextConfig = {
       },
     ],
   },
-  // Optional: if using older Next.js 13+
-  experimental: {
-    appDir: true,
-  },
+
 };
 
 module.exports = nextConfig;
