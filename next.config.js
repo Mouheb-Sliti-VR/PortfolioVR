@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,            // Enables the new App Router feature in Next.js
-  },
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -10,7 +7,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    unoptimized: true,       // This disables Next.js built-in image optimization
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -19,9 +16,10 @@ const nextConfig = {
       },
     ],
   },
-  trailingSlash: true,       // Adds trailing slash for all routes
-  basePath: '/PortfolioVR',  // Prefix all URLs with /PortfolioVR
-  // REMOVE output: 'export' since it conflicts with App Router usage
+  // Optional: if using older Next.js 13+
+  experimental: {
+    appDir: true,
+  },
 };
 
 module.exports = nextConfig;

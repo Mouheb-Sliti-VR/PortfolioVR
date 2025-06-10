@@ -1,4 +1,3 @@
-
 export function Footer() {
   return (
     <footer className="py-6 mt-12 bg-card border-t border-border">

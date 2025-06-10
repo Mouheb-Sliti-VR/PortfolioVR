@@ -44,36 +44,13 @@ export function ContactSection() {
             <CardTitle className="text-4xl font-extrabold text-primary font-poppins drop-shadow-sm tracking-tight mb-2">
               Let's Connect
             </CardTitle>
-            <div className="flex flex-col items-center gap-2 mt-4">
-              <span className="text-base font-semibold font-poppins text-foreground/90 tracking-wide mb-1">
-                Unity Certified Professional Programmer
-              </span>
-              <a
-                href="https://www.credly.com/badges/453a25b9-89f7-48bc-a6f8-8bef92931365"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Click to verify"
-                className="inline-block"
-                style={{ filter: "drop-shadow(0 0 8px #e5e7eb) drop-shadow(0 0 16px #e5e7eb)" }}
-              >
-                <span className="rounded-full border-2 border-accent bg-background p-2 shadow-lg hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                  <img
-                    src="/images/unity-certified-professional-programmer.png"
-                    alt="Unity Certified Professional Programmer Badge"
-                    width={56}
-                    height={56}
-                    className="block"
-                  />
-                </span>
-              </a>
-            </div>
             <CardDescription className="text-lg text-foreground/80 mt-6 max-w-md mx-auto font-medium">
               I'm always open to discussing new projects, creative ideas, or opportunities.<br />
-              <span className="text-accent font-semibold">Feel free to reach out or download my CV.</span>
+              <span className="text-accent font-semibold mt-5 block">Feel free to reach out or download my CV.</span>
             </CardDescription>
           </CardHeader>
-          <CardContent className="px-8 md:px-16 py-8 bg-card rounded-b-2xl">
-            <div className="flex flex-wrap justify-center gap-6">
+          <CardContent className="px-8 md:px-16 py-6 bg-card rounded-b-2xl">
+            <div className="flex flex-wrap justify-center gap-6 mt-[-4px]">
               {contactLinks.map((link) => (
                 <Button
                   key={link.text}
