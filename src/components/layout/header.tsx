@@ -15,7 +15,7 @@ export function Header() {
             >
               <div className="relative h-12 w-12 rounded-full overflow-hidden border-2 border-primary/50 group-hover:border-accent transition-colors duration-300">
                 <Image
-                  src="/images/1.jpg"
+                  src="/images/2.jpeg"
                   alt="Mouheb Sliti profile picture"
                   fill
                   className="object-cover"
@@ -27,7 +27,7 @@ export function Header() {
                   Mouheb Sliti
                 </span>
                 <span className="text-sm font-poppins text-foreground/80 block">
-                  R&D Engineer / XR Developer
+                  Full-Stack XR & AI Systems Developer
                 </span>
               </span>
             </Link>

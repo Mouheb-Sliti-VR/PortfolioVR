@@ -15,7 +15,7 @@ interface ContactLink {
 
 const contactLinks: ContactLink[] = [
   {
-    href: "mailto:mouheb.sliti@example.com",
+    href: "mailto:mouheb.sliti@gmail.com",
     text: "Email Me",
     icon: Mail,
     ariaLabel: "Send an email to Mouheb Sliti",
@@ -27,7 +27,7 @@ const contactLinks: ContactLink[] = [
     ariaLabel: "View Mouheb Sliti's LinkedIn profile",
   },
   {
-    href: "/documents/CV.pdf",
+    href: "/documents/Mouheb_Sliti_CV.pdf",
     text: "My Resume",
     icon: DownloadCloud,
     ariaLabel: "Download Mouheb Sliti's CV",
